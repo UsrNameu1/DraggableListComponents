@@ -1,5 +1,5 @@
 //
-//  MYViewController.h
+//  MYCollectionViewController.h
 //  ListComponents
 //
 //  Created by adachi.yuichi on 2014/04/22.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MYViewController : UIViewController
+@interface MYCollectionViewController : UIViewController
 
 @end

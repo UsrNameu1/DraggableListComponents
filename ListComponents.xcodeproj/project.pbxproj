@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F35F60172D154164BB745EC5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA87CF82EDE401585CD4D46 /* libPods.a */; };
 		F785DA551906161B0038CEF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA541906161B0038CEF9 /* Foundation.framework */; };
 		F785DA571906161B0038CEF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA561906161B0038CEF9 /* CoreGraphics.framework */; };
 		F785DA591906161B0038CEF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA581906161B0038CEF9 /* UIKit.framework */; };
@@ -14,13 +15,20 @@
 		F785DA611906161B0038CEF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F785DA601906161B0038CEF9 /* main.m */; };
 		F785DA651906161B0038CEF9 /* MYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F785DA641906161B0038CEF9 /* MYAppDelegate.m */; };
 		F785DA681906161B0038CEF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F785DA661906161B0038CEF9 /* Main.storyboard */; };
-		F785DA6B1906161B0038CEF9 /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F785DA6A1906161B0038CEF9 /* MYViewController.m */; };
 		F785DA6D1906161B0038CEF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F785DA6C1906161B0038CEF9 /* Images.xcassets */; };
 		F785DA741906161B0038CEF9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA731906161B0038CEF9 /* XCTest.framework */; };
 		F785DA751906161B0038CEF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA541906161B0038CEF9 /* Foundation.framework */; };
 		F785DA761906161B0038CEF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA581906161B0038CEF9 /* UIKit.framework */; };
 		F785DA7E1906161B0038CEF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F785DA7C1906161B0038CEF9 /* InfoPlist.strings */; };
 		F785DA801906161B0038CEF9 /* ListComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F785DA7F1906161B0038CEF9 /* ListComponentsTests.m */; };
+		F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C98E1906486500DD057C /* MYTableViewController.m */; };
+		F7F6C9921906487300DD057C /* MYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9911906487300DD057C /* MYCollectionViewController.m */; };
+		F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99419064C1E00DD057C /* MYAnimal.m */; };
+		F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */; };
+		F7F6C99E19064F5800DD057C /* MYAnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99D19064F5800DD057C /* MYAnimalCell.m */; };
+		F7F6C9A01906501800DD057C /* MYAnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F6C99F1906501800DD057C /* MYAnimalCell.xib */; };
+		F7F6C9A7190652C800DD057C /* UITableView+UINib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A6190652C800DD057C /* UITableView+UINib.m */; };
+		F7F6C9AA190652FD00DD057C /* MYAnimalRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DA87CF82EDE401585CD4D46 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A01CB2A6B784D64A296D18A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F785DA511906161B0038CEF9 /* ListComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F785DA541906161B0038CEF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F785DA561906161B0038CEF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +55,27 @@
 		F785DA631906161B0038CEF9 /* MYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAppDelegate.h; sourceTree = "<group>"; };
 		F785DA641906161B0038CEF9 /* MYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAppDelegate.m; sourceTree = "<group>"; };
 		F785DA671906161B0038CEF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F785DA691906161B0038CEF9 /* MYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
-		F785DA6A1906161B0038CEF9 /* MYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
 		F785DA6C1906161B0038CEF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F785DA721906161B0038CEF9 /* ListComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F785DA731906161B0038CEF9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F785DA7B1906161B0038CEF9 /* ListComponentsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ListComponentsTests-Info.plist"; sourceTree = "<group>"; };
 		F785DA7D1906161B0038CEF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F785DA7F1906161B0038CEF9 /* ListComponentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListComponentsTests.m; sourceTree = "<group>"; };
+		F7F6C98D1906486500DD057C /* MYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTableViewController.h; sourceTree = "<group>"; };
+		F7F6C98E1906486500DD057C /* MYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTableViewController.m; sourceTree = "<group>"; };
+		F7F6C9901906487300DD057C /* MYCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYCollectionViewController.h; sourceTree = "<group>"; };
+		F7F6C9911906487300DD057C /* MYCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYCollectionViewController.m; sourceTree = "<group>"; };
+		F7F6C99319064C1E00DD057C /* MYAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimal.h; sourceTree = "<group>"; };
+		F7F6C99419064C1E00DD057C /* MYAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimal.m; sourceTree = "<group>"; };
+		F7F6C99619064C3A00DD057C /* MYAnimalFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalFactory.h; sourceTree = "<group>"; };
+		F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalFactory.m; sourceTree = "<group>"; };
+		F7F6C99C19064F5800DD057C /* MYAnimalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalCell.h; sourceTree = "<group>"; };
+		F7F6C99D19064F5800DD057C /* MYAnimalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalCell.m; sourceTree = "<group>"; };
+		F7F6C99F1906501800DD057C /* MYAnimalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYAnimalCell.xib; sourceTree = "<group>"; };
+		F7F6C9A5190652C800DD057C /* UITableView+UINib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+UINib.h"; sourceTree = "<group>"; };
+		F7F6C9A6190652C800DD057C /* UITableView+UINib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+UINib.m"; sourceTree = "<group>"; };
+		F7F6C9A8190652FD00DD057C /* MYAnimalRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalRepository.h; sourceTree = "<group>"; };
+		F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalRepository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +86,7 @@
 				F785DA571906161B0038CEF9 /* CoreGraphics.framework in Frameworks */,
 				F785DA591906161B0038CEF9 /* UIKit.framework in Frameworks */,
 				F785DA551906161B0038CEF9 /* Foundation.framework in Frameworks */,
+				F35F60172D154164BB745EC5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +110,7 @@
 				F785DA791906161B0038CEF9 /* ListComponentsTests */,
 				F785DA531906161B0038CEF9 /* Frameworks */,
 				F785DA521906161B0038CEF9 /* Products */,
+				6A01CB2A6B784D64A296D18A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +130,7 @@
 				F785DA561906161B0038CEF9 /* CoreGraphics.framework */,
 				F785DA581906161B0038CEF9 /* UIKit.framework */,
 				F785DA731906161B0038CEF9 /* XCTest.framework */,
+				1DA87CF82EDE401585CD4D46 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +138,13 @@
 		F785DA5A1906161B0038CEF9 /* ListComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F7F6C9A11906520700DD057C /* Utils */,
+				F7F6C99919064EF600DD057C /* Domain */,
+				F7F6C99B19064F1000DD057C /* Service */,
+				F7F6C99A19064F0000DD057C /* View */,
 				F785DA631906161B0038CEF9 /* MYAppDelegate.h */,
 				F785DA641906161B0038CEF9 /* MYAppDelegate.m */,
 				F785DA661906161B0038CEF9 /* Main.storyboard */,
-				F785DA691906161B0038CEF9 /* MYViewController.h */,
-				F785DA6A1906161B0038CEF9 /* MYViewController.m */,
 				F785DA6C1906161B0038CEF9 /* Images.xcassets */,
 				F785DA5B1906161B0038CEF9 /* Supporting Files */,
 			);
@@ -152,6 +180,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F7F6C99919064EF600DD057C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6C99319064C1E00DD057C /* MYAnimal.h */,
+				F7F6C99419064C1E00DD057C /* MYAnimal.m */,
+				F7F6C99619064C3A00DD057C /* MYAnimalFactory.h */,
+				F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */,
+				F7F6C9A8190652FD00DD057C /* MYAnimalRepository.h */,
+				F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		F7F6C99A19064F0000DD057C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6C98D1906486500DD057C /* MYTableViewController.h */,
+				F7F6C98E1906486500DD057C /* MYTableViewController.m */,
+				F7F6C9901906487300DD057C /* MYCollectionViewController.h */,
+				F7F6C9911906487300DD057C /* MYCollectionViewController.m */,
+				F7F6C99C19064F5800DD057C /* MYAnimalCell.h */,
+				F7F6C99D19064F5800DD057C /* MYAnimalCell.m */,
+				F7F6C99F1906501800DD057C /* MYAnimalCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F7F6C99B19064F1000DD057C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		F7F6C9A11906520700DD057C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6C9A5190652C800DD057C /* UITableView+UINib.h */,
+				F7F6C9A6190652C800DD057C /* UITableView+UINib.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F785DA831906161B0038CEF9 /* Build configuration list for PBXNativeTarget "ListComponents" */;
 			buildPhases = (
+				29D7D2B7BBC34EB2A9A2A988 /* Check Pods Manifest.lock */,
 				F785DA4D1906161B0038CEF9 /* Sources */,
 				F785DA4E1906161B0038CEF9 /* Frameworks */,
 				F785DA4F1906161B0038CEF9 /* Resources */,
+				25EEF3E208104689A227062C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F785DA6D1906161B0038CEF9 /* Images.xcassets in Resources */,
+				F7F6C9A01906501800DD057C /* MYAnimalCell.xib in Resources */,
 				F785DA5F1906161B0038CEF9 /* InfoPlist.strings in Resources */,
 				F785DA681906161B0038CEF9 /* Main.storyboard in Resources */,
 			);
@@ -245,14 +319,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25EEF3E208104689A227062C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29D7D2B7BBC34EB2A9A2A988 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F785DA4D1906161B0038CEF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F785DA6B1906161B0038CEF9 /* MYViewController.m in Sources */,
+				F7F6C9921906487300DD057C /* MYCollectionViewController.m in Sources */,
+				F7F6C9A7190652C800DD057C /* UITableView+UINib.m in Sources */,
+				F7F6C9AA190652FD00DD057C /* MYAnimalRepository.m in Sources */,
 				F785DA651906161B0038CEF9 /* MYAppDelegate.m in Sources */,
 				F785DA611906161B0038CEF9 /* main.m in Sources */,
+				F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */,
+				F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */,
+				F7F6C99E19064F5800DD057C /* MYAnimalCell.m in Sources */,
+				F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +431,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuichi Adachi (RJUZKUYWAN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuichi Adachi (RJUZKUYWAN)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -334,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -366,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -374,6 +488,7 @@
 		};
 		F785DA841906161B0038CEF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A01CB2A6B784D64A296D18A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +502,7 @@
 		};
 		F785DA851906161B0038CEF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A01CB2A6B784D64A296D18A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +573,7 @@
 				F785DA851906161B0038CEF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F785DA861906161B0038CEF9 /* Build configuration list for PBXNativeTarget "ListComponentsTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +582,7 @@
 				F785DA881906161B0038CEF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
