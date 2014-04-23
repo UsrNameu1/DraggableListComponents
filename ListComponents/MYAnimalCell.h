@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "FMMoveTableViewCell.h"
-
 #import "MYAnimal.h"
 
-@interface MYAnimalCell : FMMoveTableViewCell
+@interface MYAnimalCell : UITableViewCell
 
 @property (nonatomic) MYAnimal *animal;
 

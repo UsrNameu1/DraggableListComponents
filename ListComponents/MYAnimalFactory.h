@@ -20,4 +20,6 @@
  */
 @property (nonatomic, readonly) NSArray *defaultAnimals;
 
+@property (nonatomic, readonly) MYAnimal *blankAnimal;
+
 @end

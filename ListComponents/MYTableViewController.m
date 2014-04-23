@@ -10,16 +10,16 @@
 
 #import "UITableView+UINib.h"
 
+#import "MYAnimalFactory.h"
 #import "MYAnimalRepository.h"
 
-#import "FMMoveTableView.h"
 #import "MYAnimalCell.h"
+
+#import "BVReorderTableView.h"
 
 static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
 
-@interface MYTableViewController () <FMMoveTableViewDataSource, FMMoveTableViewDelegate>
-
-@property (weak, nonatomic) IBOutlet FMMoveTableView *tableView;
+@interface MYTableViewController () <ReorderTableViewDelegate>
 
 @property (nonatomic) MYAnimalRepository *repository;
 
@@ -43,8 +43,6 @@ static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
 {
     [super viewDidLoad];
     
-    [self.tableView registerNibFromClass:[MYAnimalCell class]
-                  forCellReuseIdentifier:CellReuseIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,17 +51,30 @@ static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - FMMoveTableViewDelegate
+#pragma mark - ReorderTableViewDelegate
 
-- (void)moveTableView:(FMMoveTableView *)tableView
- moveRowFromIndexPath:(NSIndexPath *)fromIndexPath
-          toIndexPath:(NSIndexPath *)toIndexPath
+- (id)saveObjectAndInsertBlankRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.repository moveAnimalAtIndex:fromIndexPath.row
-                               toIndex:toIndexPath.row];
+    
+    return [MYAnimalFactory new].blankAnimal;
 }
 
-#pragma mark - FMMoveTableViewDataSource
+- (void)moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
+               toIndexPath:(NSIndexPath *)toIndexPath
+{
+    [self.repository moveAnimalAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
+}
+
+- (void)finishReorderingWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -75,6 +86,7 @@ static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
     MYAnimalCell *cell =
     [tableView dequeueReusableCellWithIdentifier:CellReuseIdentifier
                                     forIndexPath:indexPath];
+    
     cell.animal = self.repository.animals[indexPath.row];
     
     return cell;

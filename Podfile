@@ -1,2 +1,2 @@
-pod 'FMMoveTableView'
+pod 'BVReorderTableView'
 pod 'DraggableCollectionView'

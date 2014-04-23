@@ -36,4 +36,15 @@
     return [NSArray arrayWithArray:defaultAnimals];
 }
 
+- (MYAnimal *)blankAnimal
+{
+    static MYAnimal *blankAnimal;
+    
+    if (!blankAnimal) {
+        blankAnimal = [[MYAnimal alloc] initWithDictionary:@{@"name" : @"", @"age" : @(-1)}];
+    }
+    
+    return blankAnimal;
+}
+
 @end

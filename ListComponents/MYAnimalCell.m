@@ -33,7 +33,13 @@
     
     self.nameLabel.text = animal.name;
     [self.nameLabel sizeToFit];
-    self.ageLabel.text = [@(animal.age) stringValue];
+    
+    if (animal.age == -1) {
+        self.ageLabel.text = @"";
+    } else {
+        self.ageLabel.text = [@(animal.age) stringValue];
+    }
+    
     [self.ageLabel sizeToFit];
 }
 
