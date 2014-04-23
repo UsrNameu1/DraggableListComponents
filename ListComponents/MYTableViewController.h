@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- *  TableView
+ *  TableViewのドラッグ＆ドロップサンプルViewController
  */
 @interface MYTableViewController : UIViewController
 

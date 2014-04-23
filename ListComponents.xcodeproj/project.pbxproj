@@ -25,7 +25,7 @@
 		F7F6C9921906487300DD057C /* MYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9911906487300DD057C /* MYCollectionViewController.m */; };
 		F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99419064C1E00DD057C /* MYAnimal.m */; };
 		F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */; };
-		F7F6C99E19064F5800DD057C /* MYAnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99D19064F5800DD057C /* MYAnimalCell.m */; };
+		F7F6C99E19064F5800DD057C /* MYAnimalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99D19064F5800DD057C /* MYAnimalTableViewCell.m */; };
 		F7F6C9A7190652C800DD057C /* UITableView+UINib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A6190652C800DD057C /* UITableView+UINib.m */; };
 		F7F6C9AA190652FD00DD057C /* MYAnimalRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */; };
 /* End PBXBuildFile section */
@@ -68,8 +68,8 @@
 		F7F6C99419064C1E00DD057C /* MYAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimal.m; sourceTree = "<group>"; };
 		F7F6C99619064C3A00DD057C /* MYAnimalFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalFactory.h; sourceTree = "<group>"; };
 		F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalFactory.m; sourceTree = "<group>"; };
-		F7F6C99C19064F5800DD057C /* MYAnimalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalCell.h; sourceTree = "<group>"; };
-		F7F6C99D19064F5800DD057C /* MYAnimalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalCell.m; sourceTree = "<group>"; };
+		F7F6C99C19064F5800DD057C /* MYAnimalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalTableViewCell.h; sourceTree = "<group>"; };
+		F7F6C99D19064F5800DD057C /* MYAnimalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalTableViewCell.m; sourceTree = "<group>"; };
 		F7F6C9A5190652C800DD057C /* UITableView+UINib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+UINib.h"; sourceTree = "<group>"; };
 		F7F6C9A6190652C800DD057C /* UITableView+UINib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+UINib.m"; sourceTree = "<group>"; };
 		F7F6C9A8190652FD00DD057C /* MYAnimalRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalRepository.h; sourceTree = "<group>"; };
@@ -101,6 +101,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F71E7AF11907ABFE000BBD70 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6C98D1906486500DD057C /* MYTableViewController.h */,
+				F7F6C98E1906486500DD057C /* MYTableViewController.m */,
+				F7F6C99C19064F5800DD057C /* MYAnimalTableViewCell.h */,
+				F7F6C99D19064F5800DD057C /* MYAnimalTableViewCell.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		F7790A791907BAE7001002E2 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6C9901906487300DD057C /* MYCollectionViewController.h */,
+				F7F6C9911906487300DD057C /* MYCollectionViewController.m */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
 		F785DA481906161B0038CEF9 = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +158,6 @@
 			children = (
 				F7F6C9A11906520700DD057C /* Utils */,
 				F7F6C99919064EF600DD057C /* Domain */,
-				F7F6C99B19064F1000DD057C /* Service */,
 				F7F6C99A19064F0000DD057C /* View */,
 				F785DA631906161B0038CEF9 /* MYAppDelegate.h */,
 				F785DA641906161B0038CEF9 /* MYAppDelegate.m */,
@@ -194,21 +213,10 @@
 		F7F6C99A19064F0000DD057C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F7F6C98D1906486500DD057C /* MYTableViewController.h */,
-				F7F6C98E1906486500DD057C /* MYTableViewController.m */,
-				F7F6C9901906487300DD057C /* MYCollectionViewController.h */,
-				F7F6C9911906487300DD057C /* MYCollectionViewController.m */,
-				F7F6C99C19064F5800DD057C /* MYAnimalCell.h */,
-				F7F6C99D19064F5800DD057C /* MYAnimalCell.m */,
+				F71E7AF11907ABFE000BBD70 /* TableView */,
+				F7790A791907BAE7001002E2 /* CollectionView */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		F7F6C99B19064F1000DD057C /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Service;
 			sourceTree = "<group>";
 		};
 		F7F6C9A11906520700DD057C /* Utils */ = {
@@ -360,7 +368,7 @@
 				F785DA611906161B0038CEF9 /* main.m in Sources */,
 				F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */,
 				F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */,
-				F7F6C99E19064F5800DD057C /* MYAnimalCell.m in Sources */,
+				F7F6C99E19064F5800DD057C /* MYAnimalTableViewCell.m in Sources */,
 				F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

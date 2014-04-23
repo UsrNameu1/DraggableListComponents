@@ -8,6 +8,8 @@
 
 #import "MYAnimalFactory.h"
 
+#import "MYAnimal.h"
+
 @implementation MYAnimalFactory
 
 #pragma mark - Accessor methods

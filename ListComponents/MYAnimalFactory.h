@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MYAnimal.h"
+@class MYAnimal;
 
 /**
  *  動物を生成するファクトリ
@@ -20,6 +20,9 @@
  */
 @property (nonatomic, readonly) NSArray *defaultAnimals;
 
+/**
+ *  空を表すアニマル（NSNullでの置き換えも可能かもしれない）
+ */
 @property (nonatomic, readonly) MYAnimal *blankAnimal;
 
 @end

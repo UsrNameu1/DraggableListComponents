@@ -1,14 +1,16 @@
 //
-//  MYAnimalCell.m
+//  MYAnimalTableViewCell.m
 //  ListComponents
 //
 //  Created by adachi.yuichi on 2014/04/22.
 //  Copyright (c) 2014年 adachi.yuichi. All rights reserved.
 //
 
-#import "MYAnimalCell.h"
+#import "MYAnimalTableViewCell.h"
 
-@interface MYAnimalCell ()
+#import "MYAnimal.h"
+
+@interface MYAnimalTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
@@ -16,7 +18,7 @@
 
 @end
 
-@implementation MYAnimalCell
+@implementation MYAnimalTableViewCell
 
 #pragma mark - Lifecycle methods
 
@@ -34,6 +36,7 @@
     self.nameLabel.text = animal.name;
     [self.nameLabel sizeToFit];
     
+    //ブランクオブジェクト特有の処理です。
     if (animal.age == -1) {
         self.ageLabel.text = @"";
     } else {

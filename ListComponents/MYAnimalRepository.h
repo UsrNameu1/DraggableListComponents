@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class MYAnimal;
+
 /**
  *  動物のデータ管理リポジトリ
  */
@@ -30,5 +32,13 @@
  *  @param toIndex   順序変更先の動物インデックス
  */
 - (void)moveAnimalAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+
+/**
+ *  保存された配列の要素の指定番目を別の動物に置き換えるメソッド
+ *
+ *  @param index  指定動物インデックス
+ *  @param animal 別の動物
+ */
+- (void)replaceAnimalAtIndex:(NSUInteger)index withAnimal:(MYAnimal *)animal;
 
 @end

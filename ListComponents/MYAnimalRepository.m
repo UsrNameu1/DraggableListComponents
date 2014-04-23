@@ -28,7 +28,6 @@
     self.animals = defaultAnimals;
 }
 
-
 - (void)moveAnimalAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
 {
     NSArray *beforeSortedAnimals = self.animals;
@@ -40,6 +39,15 @@
                              atIndex:toIndex];
     
     self.animals = [NSArray arrayWithArray:afterSortedAnimals];
+}
+
+- (void)replaceAnimalAtIndex:(NSUInteger)index
+                  withAnimal:(MYAnimal *)animal
+{
+    NSMutableArray *animals = self.animals.mutableCopy;
+    [animals replaceObjectAtIndex:index withObject:animal];
+
+    self.animals = [NSArray arrayWithArray:animals];
 }
 
 @end

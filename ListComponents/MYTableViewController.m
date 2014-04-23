@@ -13,11 +13,11 @@
 #import "MYAnimalFactory.h"
 #import "MYAnimalRepository.h"
 
-#import "MYAnimalCell.h"
+#import "MYAnimalTableViewCell.h"
 
 #import "BVReorderTableView.h"
 
-static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
+static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentifier";
 
 @interface MYTableViewController () <ReorderTableViewDelegate>
 
@@ -39,12 +39,6 @@ static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -55,26 +49,30 @@ static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
 
 - (id)saveObjectAndInsertBlankRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //セルの入れ替えの際に生じる空のセルを処理するために、空のセル用のオブジェクトを用意して
+    //もともとの配列モデルの要素と入れ替えます。返り値として元のオブジェクトを返し、保存します。
+    NSUInteger saveAnimalIndex = indexPath.row;
+    MYAnimal *savedAnimal = self.repository.animals[saveAnimalIndex];
     
-    return [MYAnimalFactory new].blankAnimal;
+    MYAnimal *blankAnimal = [MYAnimalFactory new].blankAnimal;
+    [self.repository replaceAnimalAtIndex:saveAnimalIndex withAnimal:blankAnimal];
+    return savedAnimal;
 }
 
 - (void)moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
                toIndexPath:(NSIndexPath *)toIndexPath
 {
+    //モデルに順序入れ替えの指示を出します。
     [self.repository moveAnimalAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
 }
 
-- (void)finishReorderingWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath
+- (void)finishReorderingWithObject:(MYAnimal *)animal atIndexPath:(NSIndexPath *)indexPath
 {
+    //元のオブジェクトを復元します。
+    [self.repository replaceAnimalAtIndex:indexPath.row withAnimal:animal];
 }
 
 #pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -83,7 +81,7 @@ static NSString *const CellReuseIdentifier = @"MYAnimalCellReuseIdentifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MYAnimalCell *cell =
+    MYAnimalTableViewCell *cell =
     [tableView dequeueReusableCellWithIdentifier:CellReuseIdentifier
                                     forIndexPath:indexPath];
     
