@@ -20,13 +20,6 @@
 
 @implementation MYAnimalTableViewCell
 
-#pragma mark - Lifecycle methods
-
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 #pragma mark - Accessor methods
 
 - (void)setAnimal:(MYAnimal *)animal

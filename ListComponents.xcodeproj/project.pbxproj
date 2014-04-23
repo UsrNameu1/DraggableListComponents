@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F35F60172D154164BB745EC5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA87CF82EDE401585CD4D46 /* libPods.a */; };
+		F7790A7C1907BD9F001002E2 /* MYAnimalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7790A7B1907BD9F001002E2 /* MYAnimalCollectionViewCell.m */; };
 		F785DA551906161B0038CEF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA541906161B0038CEF9 /* Foundation.framework */; };
 		F785DA571906161B0038CEF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA561906161B0038CEF9 /* CoreGraphics.framework */; };
 		F785DA591906161B0038CEF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA581906161B0038CEF9 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		1DA87CF82EDE401585CD4D46 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A01CB2A6B784D64A296D18A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F7790A7A1907BD9F001002E2 /* MYAnimalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalCollectionViewCell.h; sourceTree = "<group>"; };
+		F7790A7B1907BD9F001002E2 /* MYAnimalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalCollectionViewCell.m; sourceTree = "<group>"; };
 		F785DA511906161B0038CEF9 /* ListComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F785DA541906161B0038CEF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F785DA561906161B0038CEF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 			children = (
 				F7F6C9901906487300DD057C /* MYCollectionViewController.h */,
 				F7F6C9911906487300DD057C /* MYCollectionViewController.m */,
+				F7790A7A1907BD9F001002E2 /* MYAnimalCollectionViewCell.h */,
+				F7790A7B1907BD9F001002E2 /* MYAnimalCollectionViewCell.m */,
 			);
 			name = CollectionView;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 				F785DA651906161B0038CEF9 /* MYAppDelegate.m in Sources */,
 				F785DA611906161B0038CEF9 /* main.m in Sources */,
 				F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */,
+				F7790A7C1907BD9F001002E2 /* MYAnimalCollectionViewCell.m in Sources */,
 				F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */,
 				F7F6C99E19064F5800DD057C /* MYAnimalTableViewCell.m in Sources */,
 				F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */,

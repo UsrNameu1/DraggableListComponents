@@ -33,7 +33,7 @@ static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentif
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.repository = [MYAnimalRepository new];
+        _repository = [MYAnimalRepository new];
         [self.repository loadDefaultAnimals];
     }
     return self;

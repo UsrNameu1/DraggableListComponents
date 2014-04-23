@@ -8,19 +8,32 @@
 
 #import "MYCollectionViewController.h"
 
+#import "MYAnimalRepository.h"
+
 #import "UICollectionView+Draggable.h"
 
-@interface MYCollectionViewController ()
+#import "MYAnimalCollectionViewCell.h"
+
+static NSString *const CellReuseIdentifier = @"MYAnimalCollectionViewCellReuseIdentifier";
+
+@interface MYCollectionViewController () <UICollectionViewDataSource_Draggable, UICollectionViewDelegate>
+
+@property (nonatomic) MYAnimalRepository *repository;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
 @implementation MYCollectionViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+#pragma mark - Lifecycle methods
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Custom initialization
+        _repository = [MYAnimalRepository new];
+        [self.repository loadDefaultAnimals];
     }
     return self;
 }
@@ -28,7 +41,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.collectionView.draggable = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,15 +51,44 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UICollectionViewDataSource_Draggable
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return self.repository.animals.count;
 }
-*/
+
+- (void)collectionView:(UICollectionView *)collectionView
+   moveItemAtIndexPath:(NSIndexPath *)fromIndexPath
+           toIndexPath:(NSIndexPath *)toIndexPath
+{
+    [self.repository moveAnimalAtIndex:fromIndexPath.row
+                               toIndex:toIndexPath.row];
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView
+canMoveItemAtIndexPath:(NSIndexPath *)indexPath
+           toIndexPath:(NSIndexPath *)toIndexPath
+{
+    return YES;
+}
+
+#pragma mark - UICollecitonViewDelegate
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MYAnimalCollectionViewCell *cell =
+    [collectionView dequeueReusableCellWithReuseIdentifier:CellReuseIdentifier
+                                              forIndexPath:indexPath];
+    cell.animal = self.repository.animals[indexPath.row];
+    
+    return cell;
+}
 
 @end
