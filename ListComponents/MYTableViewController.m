@@ -22,7 +22,7 @@
  */
 static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentifier";
 
-@interface MYTableViewController () <ReorderTableViewDelegate>
+@interface MYTableViewController () <ReorderTableViewDelegate, UITableViewDataSource>
 
 /**
  *  動物モデル管理リポジトリ
