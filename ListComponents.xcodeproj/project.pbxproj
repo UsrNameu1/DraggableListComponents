@@ -22,6 +22,7 @@
 		F785DA761906161B0038CEF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785DA581906161B0038CEF9 /* UIKit.framework */; };
 		F785DA7E1906161B0038CEF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F785DA7C1906161B0038CEF9 /* InfoPlist.strings */; };
 		F785DA801906161B0038CEF9 /* ListComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F785DA7F1906161B0038CEF9 /* ListComponentsTests.m */; };
+		F7A29E601908AD2200ED8E7F /* MYRandomFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A29E5F1908AD2200ED8E7F /* MYRandomFloat.m */; };
 		F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C98E1906486500DD057C /* MYTableViewController.m */; };
 		F7F6C9921906487300DD057C /* MYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9911906487300DD057C /* MYCollectionViewController.m */; };
 		F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99419064C1E00DD057C /* MYAnimal.m */; };
@@ -63,6 +64,8 @@
 		F785DA7B1906161B0038CEF9 /* ListComponentsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ListComponentsTests-Info.plist"; sourceTree = "<group>"; };
 		F785DA7D1906161B0038CEF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F785DA7F1906161B0038CEF9 /* ListComponentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListComponentsTests.m; sourceTree = "<group>"; };
+		F7A29E5E1908AD1100ED8E7F /* MYRandomFloat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYRandomFloat.h; sourceTree = "<group>"; };
+		F7A29E5F1908AD2200ED8E7F /* MYRandomFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYRandomFloat.m; sourceTree = "<group>"; };
 		F7F6C98D1906486500DD057C /* MYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTableViewController.h; sourceTree = "<group>"; };
 		F7F6C98E1906486500DD057C /* MYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTableViewController.m; sourceTree = "<group>"; };
 		F7F6C9901906487300DD057C /* MYCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYCollectionViewController.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 			children = (
 				F7F6C9A5190652C800DD057C /* UITableView+UINib.h */,
 				F7F6C9A6190652C800DD057C /* UITableView+UINib.m */,
+				F7A29E5E1908AD1100ED8E7F /* MYRandomFloat.h */,
+				F7A29E5F1908AD2200ED8E7F /* MYRandomFloat.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				F7790A7C1907BD9F001002E2 /* MYAnimalCollectionViewCell.m in Sources */,
 				F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */,
 				F7F6C99E19064F5800DD057C /* MYAnimalTableViewCell.m in Sources */,
+				F7A29E601908AD2200ED8E7F /* MYRandomFloat.m in Sources */,
 				F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

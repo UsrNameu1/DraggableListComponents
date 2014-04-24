@@ -17,10 +17,16 @@
 
 #import "BVReorderTableView.h"
 
+/**
+ *  セル再利用のための識別子
+ */
 static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentifier";
 
 @interface MYTableViewController () <ReorderTableViewDelegate>
 
+/**
+ *  動物モデル管理リポジトリ
+ */
 @property (nonatomic) MYAnimalRepository *repository;
 
 @end
@@ -47,6 +53,15 @@ static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentif
 
 #pragma mark - ReorderTableViewDelegate
 
+/**
+ *  順序入れ替えプロセスが始まった時に呼ばれるメソッドです。
+ *  指定インデックスパスに応じてデータソースモデルにブランクオブジェクトを入れ、
+ *  もともと入っていたオブジェクトを保存するために返り値として返します。
+ *
+ *  @param indexPath 入れ替えプロセスが始まった時にドラッグされたセルのインデックスパス
+ *
+ *  @return ドラッグ中のセルに入る一時的な保存対象のモデルオブジェクト
+ */
 - (id)saveObjectAndInsertBlankRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //セルの入れ替えの際に生じる空のセルを処理するために、空のセル用のオブジェクトを用意して
@@ -59,6 +74,13 @@ static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentif
     return savedAnimal;
 }
 
+/**
+ *  順序入れ替えプロセスの中で選択されたセルが新しい位置に収まった時に毎回呼ばれます。
+ *  メソッドのコールに応じてデータソースモデルに順序入れ替えの指示をここで出します。
+ *
+ *  @param fromIndexPath 順序入れ替え元のセルインデックスパス
+ *  @param toIndexPath   順序入れ替え先のセルインデックスパス
+ */
 - (void)moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
                toIndexPath:(NSIndexPath *)toIndexPath
 {
@@ -66,10 +88,18 @@ static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentif
     [self.repository moveAnimalAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
 }
 
-- (void)finishReorderingWithObject:(MYAnimal *)animal atIndexPath:(NSIndexPath *)indexPath
+/**
+ *  順序入れ替えプロセスの最後、選択されたセルが最終的な位置に収まった時に呼ばれます。
+ *  saveObjectAndInsertBlankRowAtIndexPathで保存されたオブジェクトが引数として返ってくるので、
+ *  こちらのメソッド内でデータソースに挿入されたブランクオブジェクトと入れ替えてください。
+ *
+ *  @param animal    一時的にセーブされたモデルオブジェクト
+ *  @param indexPath ドラッグされていたセルが最終的に収まる先のインデックスパス
+ */
+- (void)finishReorderingWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath
 {
     //元のオブジェクトを復元します。
-    [self.repository replaceAnimalAtIndex:indexPath.row withAnimal:animal];
+    [self.repository replaceAnimalAtIndex:indexPath.row withAnimal:object];
 }
 
 #pragma mark - UITableViewDataSource

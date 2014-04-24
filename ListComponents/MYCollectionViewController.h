@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  CollectionViewのドラッグ＆ドロップサンプルViewController
+ */
 @interface MYCollectionViewController : UIViewController
 
 @end

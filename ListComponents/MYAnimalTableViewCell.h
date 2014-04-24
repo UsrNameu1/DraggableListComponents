@@ -11,12 +11,12 @@
 @class MYAnimal;
 
 /**
- *  動物に関する情報を表示するためのセルです。
+ *  動物に関する情報を表示するためのTableViewセルです。
  */
 @interface MYAnimalTableViewCell : UITableViewCell
 
 /**
- *  情報を表示する対象の動物
+ *  表示対象の動物
  */
 @property (nonatomic) MYAnimal *animal;
 
