@@ -8,7 +8,7 @@
 
 #import "MYAnimalRepository.h"
 
-#import "MYAnimalFactory.h"
+#import "MYAnimalDataSource.h"
 
 @interface MYAnimalRepository ()
 
@@ -23,7 +23,7 @@
 - (void)loadDefaultAnimals
 {
     NSArray *defaultAnimals =
-    [MYAnimalFactory new].defaultAnimals;
+    [MYAnimalDataSource new].defaultAnimals;
     
     self.animals = defaultAnimals;
 }

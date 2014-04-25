@@ -1,16 +1,16 @@
 //
-//  MYAnimalFactory.m
+//  MYAnimalDataSource.m
 //  ListComponents
 //
 //  Created by adachi.yuichi on 2014/04/22.
 //  Copyright (c) 2014年 adachi.yuichi. All rights reserved.
 //
 
-#import "MYAnimalFactory.h"
+#import "MYAnimalDataSource.h"
 
 #import "MYAnimal.h"
 
-@implementation MYAnimalFactory
+@implementation MYAnimalDataSource
 
 #pragma mark - Accessor methods
 

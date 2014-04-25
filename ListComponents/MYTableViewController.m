@@ -10,7 +10,7 @@
 
 #import "UITableView+UINib.h"
 
-#import "MYAnimalFactory.h"
+#import "MYAnimalDataSource.h"
 #import "MYAnimalRepository.h"
 
 #import "MYAnimalTableViewCell.h"
@@ -69,7 +69,7 @@ static NSString *const CellReuseIdentifier = @"MYAnimalTableViewCellReuseIdentif
     NSUInteger saveAnimalIndex = indexPath.row;
     MYAnimal *savedAnimal = self.repository.animals[saveAnimalIndex];
     
-    MYAnimal *blankAnimal = [MYAnimalFactory new].blankAnimal;
+    MYAnimal *blankAnimal = [MYAnimalDataSource new].blankAnimal;
     [self.repository replaceAnimalAtIndex:saveAnimalIndex withAnimal:blankAnimal];
     return savedAnimal;
 }

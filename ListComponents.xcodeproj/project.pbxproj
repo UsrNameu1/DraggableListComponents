@@ -26,7 +26,7 @@
 		F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C98E1906486500DD057C /* MYTableViewController.m */; };
 		F7F6C9921906487300DD057C /* MYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9911906487300DD057C /* MYCollectionViewController.m */; };
 		F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99419064C1E00DD057C /* MYAnimal.m */; };
-		F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */; };
+		F7F6C99819064C3A00DD057C /* MYAnimalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99719064C3A00DD057C /* MYAnimalDataSource.m */; };
 		F7F6C99E19064F5800DD057C /* MYAnimalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99D19064F5800DD057C /* MYAnimalTableViewCell.m */; };
 		F7F6C9A7190652C800DD057C /* UITableView+UINib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A6190652C800DD057C /* UITableView+UINib.m */; };
 		F7F6C9AA190652FD00DD057C /* MYAnimalRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */; };
@@ -72,8 +72,8 @@
 		F7F6C9911906487300DD057C /* MYCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYCollectionViewController.m; sourceTree = "<group>"; };
 		F7F6C99319064C1E00DD057C /* MYAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimal.h; sourceTree = "<group>"; };
 		F7F6C99419064C1E00DD057C /* MYAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimal.m; sourceTree = "<group>"; };
-		F7F6C99619064C3A00DD057C /* MYAnimalFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalFactory.h; sourceTree = "<group>"; };
-		F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalFactory.m; sourceTree = "<group>"; };
+		F7F6C99619064C3A00DD057C /* MYAnimalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalDataSource.h; sourceTree = "<group>"; };
+		F7F6C99719064C3A00DD057C /* MYAnimalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalDataSource.m; sourceTree = "<group>"; };
 		F7F6C99C19064F5800DD057C /* MYAnimalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalTableViewCell.h; sourceTree = "<group>"; };
 		F7F6C99D19064F5800DD057C /* MYAnimalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalTableViewCell.m; sourceTree = "<group>"; };
 		F7F6C9A5190652C800DD057C /* UITableView+UINib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+UINib.h"; sourceTree = "<group>"; };
@@ -210,8 +210,8 @@
 			children = (
 				F7F6C99319064C1E00DD057C /* MYAnimal.h */,
 				F7F6C99419064C1E00DD057C /* MYAnimal.m */,
-				F7F6C99619064C3A00DD057C /* MYAnimalFactory.h */,
-				F7F6C99719064C3A00DD057C /* MYAnimalFactory.m */,
+				F7F6C99619064C3A00DD057C /* MYAnimalDataSource.h */,
+				F7F6C99719064C3A00DD057C /* MYAnimalDataSource.m */,
 				F7F6C9A8190652FD00DD057C /* MYAnimalRepository.h */,
 				F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */,
 			);
@@ -378,7 +378,7 @@
 				F785DA611906161B0038CEF9 /* main.m in Sources */,
 				F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */,
 				F7790A7C1907BD9F001002E2 /* MYAnimalCollectionViewCell.m in Sources */,
-				F7F6C99819064C3A00DD057C /* MYAnimalFactory.m in Sources */,
+				F7F6C99819064C3A00DD057C /* MYAnimalDataSource.m in Sources */,
 				F7F6C99E19064F5800DD057C /* MYAnimalTableViewCell.m in Sources */,
 				F7A29E601908AD2200ED8E7F /* MYRandomFloat.m in Sources */,
 				F7F6C98F1906486500DD057C /* MYTableViewController.m in Sources */,

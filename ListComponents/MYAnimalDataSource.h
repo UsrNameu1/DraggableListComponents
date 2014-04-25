@@ -1,5 +1,5 @@
 //
-//  MYAnimalFactory.h
+//  MYAnimalDataSource.h
 //  ListComponents
 //
 //  Created by adachi.yuichi on 2014/04/22.
@@ -11,9 +11,9 @@
 @class MYAnimal;
 
 /**
- *  動物を生成するファクトリ
+ *  動物オブジェクトのソース元です。永続化サービスやWebサービスなどと読み替えてください。
  */
-@interface MYAnimalFactory : NSObject
+@interface MYAnimalDataSource : NSObject
 
 /**
  *  デフォルトの動物配列
