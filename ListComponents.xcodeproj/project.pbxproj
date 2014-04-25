@@ -28,7 +28,6 @@
 		F7F6C99519064C1E00DD057C /* MYAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99419064C1E00DD057C /* MYAnimal.m */; };
 		F7F6C99819064C3A00DD057C /* MYAnimalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99719064C3A00DD057C /* MYAnimalDataSource.m */; };
 		F7F6C99E19064F5800DD057C /* MYAnimalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C99D19064F5800DD057C /* MYAnimalTableViewCell.m */; };
-		F7F6C9A7190652C800DD057C /* UITableView+UINib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A6190652C800DD057C /* UITableView+UINib.m */; };
 		F7F6C9AA190652FD00DD057C /* MYAnimalRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +75,6 @@
 		F7F6C99719064C3A00DD057C /* MYAnimalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalDataSource.m; sourceTree = "<group>"; };
 		F7F6C99C19064F5800DD057C /* MYAnimalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalTableViewCell.h; sourceTree = "<group>"; };
 		F7F6C99D19064F5800DD057C /* MYAnimalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalTableViewCell.m; sourceTree = "<group>"; };
-		F7F6C9A5190652C800DD057C /* UITableView+UINib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+UINib.h"; sourceTree = "<group>"; };
-		F7F6C9A6190652C800DD057C /* UITableView+UINib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+UINib.m"; sourceTree = "<group>"; };
 		F7F6C9A8190652FD00DD057C /* MYAnimalRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnimalRepository.h; sourceTree = "<group>"; };
 		F7F6C9A9190652FD00DD057C /* MYAnimalRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnimalRepository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,8 +227,6 @@
 		F7F6C9A11906520700DD057C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F7F6C9A5190652C800DD057C /* UITableView+UINib.h */,
-				F7F6C9A6190652C800DD057C /* UITableView+UINib.m */,
 				F7A29E5E1908AD1100ED8E7F /* MYRandomFloat.h */,
 				F7A29E5F1908AD2200ED8E7F /* MYRandomFloat.m */,
 			);
@@ -372,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F6C9921906487300DD057C /* MYCollectionViewController.m in Sources */,
-				F7F6C9A7190652C800DD057C /* UITableView+UINib.m in Sources */,
 				F7F6C9AA190652FD00DD057C /* MYAnimalRepository.m in Sources */,
 				F785DA651906161B0038CEF9 /* MYAppDelegate.m in Sources */,
 				F785DA611906161B0038CEF9 /* main.m in Sources */,

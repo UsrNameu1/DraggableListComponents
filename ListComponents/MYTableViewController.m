@@ -8,8 +8,6 @@
 
 #import "MYTableViewController.h"
 
-#import "UITableView+UINib.h"
-
 #import "MYAnimalDataSource.h"
 #import "MYAnimalRepository.h"
 
